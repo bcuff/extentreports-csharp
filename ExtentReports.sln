@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.106
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.62
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtentReports", "ExtentReports\ExtentReports.csproj", "{783324EC-3D15-46A1-B34E-A1F15B97DD59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtentReports", "ExtentReports\ExtentReports.csproj", "{783324EC-3D15-46A1-B34E-A1F15B97DD59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtentReports.Tests", "ExtentReports.Tests\ExtentReports.Tests.csproj", "{C695EFE8-5DC4-4512-8541-198DDA3827A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtentReports.Tests", "ExtentReports.Tests\ExtentReports.Tests.csproj", "{C695EFE8-5DC4-4512-8541-198DDA3827A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtentReportsDotNetCLI", "ExtentReportsDotNetCLI\ExtentReportsDotNetCLI.csproj", "{C121DC28-3DE9-40BF-AAE3-1771B50A231E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C695EFE8-5DC4-4512-8541-198DDA3827A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C695EFE8-5DC4-4512-8541-198DDA3827A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C695EFE8-5DC4-4512-8541-198DDA3827A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C121DC28-3DE9-40BF-AAE3-1771B50A231E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C121DC28-3DE9-40BF-AAE3-1771B50A231E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C121DC28-3DE9-40BF-AAE3-1771B50A231E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C121DC28-3DE9-40BF-AAE3-1771B50A231E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
