@@ -6,6 +6,7 @@ using AventStack.ExtentReports.Reporter;
 using McMaster.Extensions.CommandLineUtils;
 
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 
@@ -39,6 +40,9 @@ namespace AventStack.ExtentReports.CLI
         [Option("--merge")]
         private bool Merge { get; set; } = false;
 
+        [Option("--debug")]
+        private bool Debug { get; set; } = false;
+
         private static void Main(string[] args)
         {
             CommandLineApplication.Execute<Program>(args);
@@ -46,6 +50,7 @@ namespace AventStack.ExtentReports.CLI
 
         private void OnExecute()
         {
+            if (Debug) Debugger.Launch();
             _logger = new Logger(LoggingLevel);
             _logger.WriteLine(LoggingLevel.Verbose, "extentreports-cli initializing ...");
 
