@@ -19,4 +19,12 @@
     <EmbeddedResource Include="**/*.cshtml" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Resources\Languages.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Languages.txt" />
+  </ItemGroup>
+
 </Project>

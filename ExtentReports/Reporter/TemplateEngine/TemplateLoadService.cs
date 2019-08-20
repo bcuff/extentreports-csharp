@@ -17,7 +17,10 @@ namespace AventStack.ExtentReports.Reporter.TemplateEngine
         {
             foreach (string template in templates)
             {
-                string resourceName = typeof(T).Namespace + "." + template + ".cshtml";
+                var @namespace = typeof(T).Namespace;
+                const string trimStartText = "AventStack.";
+                if (@namespace.StartsWith(trimStartText)) @namespace = @namespace.Substring(trimStartText.Length);
+                string resourceName = @namespace + "." + template + ".cshtml";
                 using (var resourceStream = typeof(T).Assembly.GetManifestResourceStream(resourceName))
                 {
                     using (var reader = new StreamReader(resourceStream))

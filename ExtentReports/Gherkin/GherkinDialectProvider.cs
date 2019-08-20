@@ -1,6 +1,8 @@
 ﻿using Newtonsoft.Json;
 
 using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 
 namespace AventStack.ExtentReports.Gherkin
 {
@@ -12,8 +14,13 @@ namespace AventStack.ExtentReports.Gherkin
 
         static GherkinDialectProvider()
         {
-            var json = Resources.GherkinLangs.Languages;
-            _dialects = JsonConvert.DeserializeObject<Dictionary<string, GherkinKeywords>>(json);
+            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("ExtentReports.Resources.Languages.txt"))
+            using (var reader = new StreamReader(stream))
+            using (var jsonReader = new JsonTextReader(reader))
+            {
+                var serializer = new JsonSerializer();
+                _dialects = serializer.Deserialize<Dictionary<string, GherkinKeywords>>(jsonReader);
+            }
         }
 
         public static string DefaultDialect { get; } = "en";
