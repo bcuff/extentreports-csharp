@@ -2,7 +2,6 @@
 using AventStack.ExtentReports.Core;
 using AventStack.ExtentReports.Model;
 using AventStack.ExtentReports.Reporter.Configuration;
-using AventStack.ExtentReports.Reporter.Configuration.Default;
 
 using System;
 using System.Collections.Generic;
@@ -60,14 +59,15 @@ namespace AventStack.ExtentReports.Reporter
         {
             Configuration = userConfig;
 
-            foreach (SettingsProperty setting in ExtentHtmlReporterSettings.Default.Properties)
-            {
-                var key = setting.Name;
-                var value = ExtentHtmlReporterSettings.Default.Properties[setting.Name].DefaultValue.ToString();
+            // note - removed in port
+            //foreach (SettingsProperty setting in ExtentHtmlReporterSettings.Default.Properties)
+            //{
+            //    var key = setting.Name;
+            //    var value = ExtentHtmlReporterSettings.Default.Properties[setting.Name].DefaultValue.ToString();
 
-                var c = new Config(key, value);
-                MasterConfig.AddConfig(c);
-            }
+            //    var c = new Config(key, value);
+            //    MasterConfig.AddConfig(c);
+            //}
         }
 
         public override void Flush(ReportAggregates reportAggregates)
